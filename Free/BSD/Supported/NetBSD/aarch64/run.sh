@@ -1,11 +1,9 @@
-qemu-system-aarch64 -M virt,accel=hvf,acpi=off -m 8G -cpu host -serial stdio -smp cores=8 \
-    -boot menu=on \
+#!/bin/sh
+qemu-system-aarch64 -M virt,accel=hvf,highmem=off -m 3G -cpu cortex-a72 -serial stdio -smp cores=8 \
     $QEMU_SND \
     -display cocoa,show-cursor=on \
-    $QEMU_VIRTIO_PERIPH \
-    -device virtio-gpu-pci,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT \
+    $QEMU_USB \
+    -device ramfb \
     $QEMU_AAVMF \
-    -drive file=netbsd.img,if=none,id=hd \
-    -drive file=arm64.img,id=install,if=none,readonly=on \
-    -device virtio-blk-device,drive=hd \
-    -device virtio-blk-device,drive=install
+    -drive file=arm64.img,id=hd,if=none \
+    -device usb-storage,drive=hd
