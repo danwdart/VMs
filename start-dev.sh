@@ -1,1 +1,1 @@
-qemu-system-x86_64 -drive file=debian.qcow2,if=virtio -drive file=debian-10.8.0-amd64-netinst.iso,media=cdrom -pflash OVMF_CODE.fd -pflash OVMF_VARS.fd  -device virtio-tablet -device virtio-keyboard  -m 2048 -M q35 -enable-kvm -cpu host -smp cores=8 -nic user,hostfwd=tcp::2222-:22 -display none
+qemu-system-x86_64 -drive file=debian.qcow2,if=virtio -pflash OVMF_CODE.fd -pflash OVMF_VARS.fd  -device virtio-tablet -device virtio-keyboard  -m 2048 -M q35 -enable-kvm -cpu host -smp cores=8 -nic user,hostfwd=tcp::2222-:22 -display none
