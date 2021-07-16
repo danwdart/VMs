@@ -1,1 +1,1 @@
-qemu-system-x86_64 -M q35 -enable-kvm -m 4096 -pflash OVMF_CODE.fd -pflash OVMF_VARS.fd -usb -device qxl-vga -device usb-kbd -device usb-tablet -device intel-hda -cpu host -smp cores=4 win11.qcow2 -cdrom win11.iso
+qemu-system-x86_64 -M q35 -enable-kvm -m 4096 -pflash OVMF_CODE.fd -pflash OVMF_VARS.fd -usb -device qxl-vga -device usb-kbd -device usb-tablet -device intel-hda -cpu host -smp cores=4 win11.qcow2 -cdrom win11.iso -tpmdev passthrough,id=tpm0,path=/dev/tpm0 -device tpm-tis,tpmdev=tpm0
