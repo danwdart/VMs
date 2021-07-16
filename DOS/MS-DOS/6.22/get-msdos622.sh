@@ -1,6 +1,4 @@
-#!/bin/sh
-wget --content-disposition https://winworldpc.com/download/417d71c2-ae18-c39a-11c3-a4e284a2c3a5/from/c3ae6ee2-8099-713d-3411-c3a6e280947e
-# ia download --no-directories windows-98-se-english-oem "Win98 SE.iso"
-7z e "Microsoft Windows 98 Second Edition.7z" "Microsoft Windows 98 Second Edition/Windows 98 Second Edition.iso" win98.iso
-rm "Microsoft Windows 98 Second Edition.7z"
-mv "Windows 98 Second Edition.iso" msdos622.iso
+wget https://cloudflare-ipfs.com/ipfs/QmSeHBGoMxSjCzkaJEpkshkopQKPWhgFT8z1XJC3jgGCx8/Microsoft%20MS-DOS%206.22%20Plus%20Enhanced%20Tools%20(3.5).7z
+7z x Microsoft MS-DOS 6.22 Plus Enhanced Tools (3.5).7z
+mv Microsoft\ MS-DOS\ 6.22\ Plus\ Enhanced\ Tools\ \(3.5\)/*.img .
+rm Microsoft\ MS-DOS\ 6.22\ Plus\ Enhanced\ Tools\ \(3.5\)* -rf
