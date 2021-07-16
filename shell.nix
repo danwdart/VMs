@@ -4,10 +4,12 @@ runCommand "VMs" {
         aria
         cabextract
         chntpw
+        ipfs
         OVMF
         OVMF-CSM
         OVMF-secureBoot
         python39
+        python39Packages.internetarchive
         qemu
         wimlib
     ];
