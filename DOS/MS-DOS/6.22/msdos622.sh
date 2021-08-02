@@ -1,1 +1,1 @@
-qemu-system-i386 -enable-kvm -cpu pentium3 -device cirrus-vga -m 512 -usb -device usb-tablet msdos622.qcow2
+qemu-system-i386 -cpu 486 -m 4 -device sb16 msdos622.qcow2
