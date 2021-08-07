@@ -1,6 +1,10 @@
 *.iso
 *.img
+*.7z
+*.xz
+*.bin
+*.zst
+*.img.gz
 *.qcow2
+*.fd
 .direnv
-OVMF_CODE.fd
-OVMF_VARS.fd
