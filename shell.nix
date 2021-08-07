@@ -4,6 +4,7 @@ runCommand "VMs" {
         aria
         cabextract
         chntpw
+        dmg2img
         ipfs
         OVMF
         OVMF-CSM
