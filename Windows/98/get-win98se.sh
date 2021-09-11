@@ -4,3 +4,4 @@ wget --content-disposition https://winworldpc.com/download/417d71c2-ae18-c39a-11
 7z e "Microsoft Windows 98 Second Edition.7z" "Microsoft Windows 98 Second Edition/Windows 98 Second Edition.iso" win98.iso
 rm "Microsoft Windows 98 Second Edition.7z"
 mv "Windows 98 Second Edition.iso" win98se.iso
+# ia download vesa_graphics_drivers_iso
