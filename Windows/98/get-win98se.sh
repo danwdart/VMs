@@ -5,3 +5,5 @@ wget --content-disposition https://winworldpc.com/download/417d71c2-ae18-c39a-11
 rm "Microsoft Windows 98 Second Edition.7z"
 mv "Windows 98 Second Edition.iso" win98se.iso
 # ia download vesa_graphics_drivers_iso
+# http://web.archive.org/web/20060212132151/http://www.user.cityline.ru/~maxamn/amnhltm.zip
+# http://web.archive.org/web/20051222085335/http://www.vmware.com/software/dosidle210.zip
