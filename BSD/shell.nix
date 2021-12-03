@@ -10,9 +10,7 @@ runCommand "BSD" {
         done
     '';
     buildInputs = [
-        OVMF
-        OVMF-CSM
-        OVMF-secureBoot
+        OVMFFull.fd
         qemu
     ];
 } ""
