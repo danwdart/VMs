@@ -1,4 +1,4 @@
-with import (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/master.tar.gz") {
+with import <nixpkgs> {
     config.android_sdk.accept_license = true;
     config.allowUnfree = true;
 };
