@@ -1,1 +1,1 @@
-wget https://downloads.omnios.org/media/stable/omnios-r151038.usb-dd
+wget https://downloads.omnios.org/media/stable/omnios-r151040.usb-dd
