@@ -1,1 +1,2 @@
-qemu-img create -f qcow2 msdos622.qcow2 40M
+fallocate -l40M msdos622.img
+chattr +C msdos622.img
