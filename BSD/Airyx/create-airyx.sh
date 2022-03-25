@@ -1,1 +1,2 @@
-qemu-img create -f qcow2 airyx.qcow2 10G
+fallocate -l10G airyx.img
+chattr +C airyx.img
