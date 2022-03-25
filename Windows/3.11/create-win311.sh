@@ -1,1 +1,1 @@
-qemu-img create -f qcow2 win311.qcow2 100M
+cp ../../DOS/MS-DOS/6.22/msdos622.img win311.img

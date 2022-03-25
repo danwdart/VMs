@@ -1,1 +1,1 @@
-qemu-system-i386 -enable-kvm -cpu pentium3 -device cirrus-vga -m 512 -usb -device usb-tablet win311.qcow2 -cdrom win311.iso -boot d
+qemu-system-i386 -enable-kvm -cpu 486 -device sb16 -nic user,model=pcnet  -m 16 win311.img -fda Disk01.img -monitor stdio
