@@ -1,1 +1,2 @@
-qemu-img create -f qcow2 netbsd.qcow2 10G
+fallocate -l10G netbsd.img
+chattr +C netbsd.img
