@@ -1,1 +1,2 @@
-qemu-img create -f qcow2 win11.qcow2 70G
+fallocate -l40G win11.img
+chattr +C win11.img
