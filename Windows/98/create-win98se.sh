@@ -1,1 +1,2 @@
-qemu-img create -f qcow2 win98se.qcow2 4G
+fallocate -l4G win98se.img
+chattr +C win98se.img
