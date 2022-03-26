@@ -10,10 +10,18 @@ rm boot.7z
 mv Microsoft\ Windows\ 98\ Second\ Edition\ -\ Boot\ Disk\ \(3.5-1.44mb\)/Windows\ 98\ Second\ Edition\ Boot.img boot.img
 rm -rf Microsoft\ Windows\ 98\ Second\ Edition\ -\ Boot\ Disk\ \(3.5-1.44mb\)/
 # ia download vesa_graphics_drivers_iso
-# http://web.archive.org/web/20060212132151/http://www.user.cityline.ru/~maxamn/amnhltm.zip
-# http://web.archive.org/web/20051222085335/http://www.vmware.com/software/dosidle210.zip
 wget -c https://archive.org/download/vbemp9x2008.03.23/vbemp9x.zip
 unzip vbemp9x.zip
 genisoimage -JRo vbe9x.iso vbe9x
 rm vbemp9x.zip vbe9x -rf
+wget http://web.archive.org/web/20060212132151/http://www.user.cityline.ru/~maxamn/amnhltm.zip
+wget http://web.archive.org/web/20051222085335/http://www.vmware.com/software/dosidle210.zip
+mkdir 98utils
+cd 98utils
+7z x ../amnhltm.zip
+7z x ../dosidle210.zip
+cd ..
+rm amnhltm.zip
+rm dosidle210.zip
 
+genisoimage -JRo98utils.iso 98utils
