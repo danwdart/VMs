@@ -1,0 +1,1 @@
+qemu-system-x86_64 -M q35 -enable-kvm -m 2048 -device virtio-vga-gl -device virtio-keyboard -device virtio-tablet -nic user,model=virtio -device intel-hda -cpu host -smp cores=2,threads=2 -drive file=hello.img -drive file=hello-0.7.0_0G160-FreeBSD-13.0-amd64.iso,media=cdrom -display sdl,gl=on -boot menu=on
