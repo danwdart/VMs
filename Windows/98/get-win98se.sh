@@ -23,5 +23,5 @@ cd 98utils
 cd ..
 rm amnhltm.zip
 rm dosidle210.zip
-
 genisoimage -JRo98utils.iso 98utils
+rm -rf 98utils
