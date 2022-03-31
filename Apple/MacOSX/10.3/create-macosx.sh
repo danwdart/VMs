@@ -1,1 +1,2 @@
-qemu-img create -f qcow2 macosx.qcow2 10G
+fallocate -l10G macosx.img
+chattr +C macosx.img

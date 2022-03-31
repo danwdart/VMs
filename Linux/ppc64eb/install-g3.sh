@@ -1,0 +1,1 @@
+qemu-system-ppc -M g3beige,usb=on -m 512 -cpu g3 -drive file=dualboot.img,format=raw -drive file="debian-11.0.0-ppc64-NETINST-1.iso",media=cdrom,format=raw -nic model=sungem -boot d -device usb-kbd -device usb-tablet -monitor stdio
