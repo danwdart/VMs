@@ -1,13 +1,13 @@
 #!/bin/sh
 getiso() {
-    wget --content-disposition https://winworldpc.com/download/417d71c2-ae18-c39a-11c3-a4e284a2c3a5/from/c3ae6ee2-8099-713d-3411-c3a6e280947e
+    wget -c --content-disposition https://winworldpc.com/download/417d71c2-ae18-c39a-11c3-a4e284a2c3a5/from/c3ae6ee2-8099-713d-3411-c3a6e280947e
     # ia download --no-directories windows-98-se-english-oem "Win98 SE.iso"
     7z e "Microsoft Windows 98 Second Edition.7z" "Microsoft Windows 98 Second Edition/Windows 98 Second Edition.iso" win98.iso
     rm "Microsoft Windows 98 Second Edition.7z"
     mv "Windows 98 Second Edition.iso" win98se.iso
 }
 getboot() {
-    wget https://winworldpc.com/download/49c380c2-a9c3-af25-c389-11c3a6e28094/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2 -Oboot.7z
+    wget -c https://winworldpc.com/download/49c380c2-a9c3-af25-c389-11c3a6e28094/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2 -Oboot.7z
     7z x boot.7z
     rm boot.7z
     mv Microsoft\ Windows\ 98\ Second\ Edition\ -\ Boot\ Disk\ \(3.5-1.44mb\)/Windows\ 98\ Second\ Edition\ Boot.img boot.img

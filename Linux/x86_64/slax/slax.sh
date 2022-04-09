@@ -1,1 +1,1 @@
-qemu-system-x86_64 -cdrom slax-64bit-11.3.0.iso -m 1024 -cpu host -smp 4 -enable-kvm -M q35 -device virtio-tablet -device virtio-keyboard -nic user,model=virtio -device virtio-vga-gl -display sdl,gl=on -device virtio-balloon
+$QEMU_X86_64 -cdrom slax-64bit-11.3.0.iso -m 1024 $QEMU_VIRTIO_PERIPH -nic user,model=virtio $QEMU_DISP_GL -device virtio-balloon

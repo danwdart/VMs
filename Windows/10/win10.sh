@@ -1,1 +1,1 @@
-qemu-system-x86_64 -M q35 -enable-kvm -m 2048 -pflash OVMF_CODE.fd -pflash OVMF_VARS.fd -device virtio-vga -device virtio-keyboard -device virtio-tablet -device virtio-net -device intel-hda -cpu host -smp cores=8 win10.qcow2 -cdrom win10.iso
+$QEMU_X86_64 -m 2048 $QEMU_OVMF -device virtio-vga $QEMU_VIRTIO_PERIPH -device virtio-net -device intel-hda win10.img -cdrom win10.iso

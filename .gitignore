@@ -7,4 +7,6 @@
 *.img.gz
 *.qcow2
 *.fd
+*.aria2
+*.part
 .direnv

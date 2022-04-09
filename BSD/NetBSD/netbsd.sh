@@ -1,1 +1,1 @@
-qemu-system-x86_64 -enable-kvm -cpu host -smp 4 -M q35 netbsd.img -usb -device usb-kbd -device usb-tablet -device qxl-vga -boot menu=on -m 2048 # -pflash OVMF_CODE.fd -pflash OVMF_VARS.fd
+$QEMU_X86_64_BSD netbsd.img $QEMU_USB $QEMU_DISP_GL -boot menu=on -m 2048 $QEMU_OVMF
