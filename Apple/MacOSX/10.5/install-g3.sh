@@ -1,0 +1,1 @@
+qemu-system-ppc -M g3beige,usb=on -m 512 -cpu g3 -drive file=macosx.img,format=raw -drive file="osx leopard install.iso",media=cdrom,format=raw -nic model=sungem -boot d -device usb-kbd -device usb-tablet -monitor stdio -prom-env "boot-args=-v" -prom-env "vga-ndrv?=true" -prom-env "auto-boot?=true" -device VGA,edid=on -g 800x600x32
