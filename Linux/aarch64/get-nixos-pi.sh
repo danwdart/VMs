@@ -1,4 +1,4 @@
-wget -c --content-disposition https://hydra.nixos.org/job/nixos/trunk-combined/nixos.sd_image_new_kernel.aarch64-linux/latest/download
+aria2c -s16 -j16 -x16 -k1M -c --content-disposition https://hydra.nixos.org/job/nixos/trunk-combined/nixos.sd_image_new_kernel.aarch64-linux/latest/download
 unzstd *.zst
 rm *.zst
 7z x *.img 0.fat
