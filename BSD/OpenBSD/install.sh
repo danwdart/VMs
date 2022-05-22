@@ -1,0 +1,1 @@
+$QEMU_X86_64_BSD openbsd.img $QEMU_USB -device usb-storage,drive=installer -drive file=install71.img,if=none,id=installer $QEMU_DISP_GL -boot menu=on -m 2048 $QEMU_OVMF

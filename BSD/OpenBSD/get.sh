@@ -1,0 +1,1 @@
+aria2c -s16 -j16 -x16 -k1M -c https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64/install71.img
