@@ -1,1 +1,1 @@
-qemu-system-i386 -m 512 -cpu host -smp 4 win2k.img -cdrom 5.00.2195.6717_x86fre_client-professional_retail_en-us-ZRMPSEL_EN.iso -win2k-hack -usb -device usb-tablet -device usb-kbd -nic user,model=ne2k_pci -device ac97 -enable-kvm
+qemu-system-i386 -m 512 -cpu host -smp 4 win2k.img -cdrom win2k.iso -win2k-hack -usb -device usb-tablet -device usb-kbd -nic user,model=ne2k_pci -device ac97 -enable-kvm
