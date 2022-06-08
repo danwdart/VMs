@@ -1,1 +1,1 @@
-sudo $QEMU_X86_64 -m 4096 $QEMU_OVMF -usb $QEMU_DISP_QXL -device usb-kbd -device usb-tablet -device intel-hda win11.img -cdrom Win11_EnglishInternational_x64v1.iso $QEMU_TPM -drive file=virtio-win-0.1.215.iso,media=cdrom 
+sudo $QEMU_X86_64 -m 4096 $QEMU_OVMF $QEMU_DISP_QXL $QEMU_VIRTIO_PERIPH -device virtio-net -device ich9-intel-hda -device hda-output -drive file=win11.img,if=virtio $QEMU_TPM
