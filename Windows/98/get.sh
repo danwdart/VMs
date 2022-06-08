@@ -7,8 +7,8 @@ mkiso() {
 }
 
 mkboot() {
-    7z x boot.7z
-    rm boot.7z
+    7z x 'Microsoft Windows 98 Second Edition - Boot Disk (3.5-1.44mb).7z'
+    rm 'Microsoft Windows 98 Second Edition - Boot Disk (3.5-1.44mb).7z'
     mv Microsoft\ Windows\ 98\ Second\ Edition\ -\ Boot\ Disk\ \(3.5-1.44mb\)/Windows\ 98\ Second\ Edition\ Boot.img boot.img
     rm -rf Microsoft\ Windows\ 98\ Second\ Edition\ -\ Boot\ Disk\ \(3.5-1.44mb\)/
 }
