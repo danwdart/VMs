@@ -1,0 +1,1 @@
+$QEMU_X86_64 -m 4096 $QEMU_OVMF $QEMU_DISP_GL $QEMU_VIRTIO_PERIPH -device virtio-net -device ich9-intel-hda -device hda-output -drive file=win10.img,if=virtio -drive file=Win10_21H2_EnglishInternational_x64.iso,media=cdrom -drive file=virtio-win-*.iso,media=cdrom
