@@ -1,2 +1,1 @@
-fallocate -l4G mandrake.img
-chattr +C mandrake.img
+create_hd_img 4G mandrake.img

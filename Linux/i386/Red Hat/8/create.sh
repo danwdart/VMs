@@ -1,2 +1,1 @@
-fallocate -l4G redhat.img
-chattr +C redhat.img
+create_hd_img 4G redhat.img

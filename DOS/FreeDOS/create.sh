@@ -1,2 +1,1 @@
-fallocate -l100M fd.img
-chattr +C fd.img
+create_hd_img 100M fd.img

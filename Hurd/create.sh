@@ -1,2 +1,1 @@
-fallocate -l10G hurd.img
-chattr +C hurd.img
+create_hd_img 10G hurd.img

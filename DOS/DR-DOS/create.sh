@@ -1,2 +1,1 @@
-fallocate -l40M drdos.img
-chattr +C drdos.img
+create_hd_img 40M drdos.img

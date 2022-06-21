@@ -1,2 +1,1 @@
-fallocate -l10G openbsd.img
-chattr +C openbsd.img
+create_hd_img 10G openbsd.img

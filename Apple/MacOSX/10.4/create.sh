@@ -1,2 +1,1 @@
-fallocate -l10G macosx.img
-chattr +C macosx.img
+create_hd_img 10G macosx.img

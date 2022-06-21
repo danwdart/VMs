@@ -1,2 +1,1 @@
-fallocate -l4G win98se.img
-chattr +C win98se.img
+create_hd_img 4G win98se.img

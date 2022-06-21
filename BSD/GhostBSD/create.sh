@@ -1,2 +1,1 @@
-fallocate -l10G ghostbsd.img
-chattr +C ghostbsd.img
+create_hd_img 10G ghostbsd.img

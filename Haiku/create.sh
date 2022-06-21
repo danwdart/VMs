@@ -1,2 +1,1 @@
-fallocate -l1G haiku.img
-chattr +C haiku.img
+create_hd_img 1G haiku.img

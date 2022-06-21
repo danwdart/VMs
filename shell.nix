@@ -20,7 +20,7 @@ runCommand "VMs" {
             DIRNAME="$(dirname "{}")"
             [ -f "$DIRNAME/OVMF_VARS.fd" ] || cp --no-preserve=mode,ownership $OVMF_VARS "$DIRNAME"
         ' \;
-        source fns.sh
+        export PATH=$PWD/.bin:$PATH
     '';
     buildInputs = [
         OVMFFull.fd

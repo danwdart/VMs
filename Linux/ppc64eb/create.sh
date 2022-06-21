@@ -1,2 +1,1 @@
-fallocate -l10G dualboot.img
-chattr +C dualboot.img
+create_hd_img 10G dualboot.img

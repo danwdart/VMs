@@ -1,2 +1,1 @@
-fallocate -l4G macos.img
-chattr +C macos.img
+create_hd_img 4G macos.img

@@ -1,2 +1,1 @@
-fallocate -l4G oi.img
-chattr +C oi.img
+create_hd_img 4G oi.img

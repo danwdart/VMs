@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<node data="id=1" label="PlayLists">
+	<node data="id=2" label="How to use this CBT" auto_select="true">
+		<node data="id=245" label="Using the CBT" url="intro.swf" auto_advance="true" />
+	</node>
+	<node data="id=3" label="SLED 10 for Beginners">
+		<node data="id=301" label="Navigating the Computer Menu" auto_advance="true"  url="using_desktop_menus/1navigatingthecomputermenu.swf" movieFPS="8" isBranch="true" keywords="computer,menu,navigate,application,locate,use" />
+		<node data="id=401" label="Exploring the Panel" auto_advance="true"  url="configuring_desktop_panels/1exploringthepanel.swf" movieFPS="8" isBranch="true" keywords="panel,explore,launch,browse,configure,application,program" />
+		<node data="id=402" label="Adding Panels" auto_advance="true"  url="configuring_desktop_panels/2addingpanels.swf" movieFPS="8" isBranch="true" keywords="panel,add,new,application,program" />
+		<node data="id=502" label="Changing the Desktop Background" auto_advance="true"  url="customizing_desktop_settings/2changedesktopbackground.swf" movieFPS="8" isBranch="true" keywords="change,different,background,desktop,setting,picture,style,wallpaper,display" />
+		<node data="id=504" label="Using the Desktop Search Tool" auto_advance="true"  url="customizing_desktop_settings/9usingdesktopsearchtool.swf" movieFPS="8" isBranch="true" keywords="search,find,question,help,tool,desktop,lost" />
+		<node data="id=601" label="Exploring File System Organization" auto_advance="true"  url="managing_files/1explorefilesystem.swf" movieFPS="8" isBranch="true" keywords="file,nautilus,explore,find,system,locate,directory" />
+		<node data="id=603" label="Using Nautilus" auto_advance="true"  url="managing_files/4usingnautilus.swf" movieFPS="8" isBranch="true" keywords="browse,nautilus,file,system,home,find,use,home,computer,tree,history" />
+		<node data="id=604" label="Introduction to Desktop Components" auto_advance="true"  url="introduction/4introdesktopcomp.swf" movieFPS="8" isBranch="true" keywords="desktop,folder,icon,intro,navigate" />
+		<node data="id=605" label="Logging In" auto_advance="true"  url="introduction/5login.swf" movieFPS="8" isBranch="true" keywords="login,log in,username,password,startup,start,begin" />
+		<node data="id=606" label="Logging Out to Shutdown" auto_advance="true"  url="introduction/6logoutshutdown.swf" movieFPS="8" isBranch="true" keywords="finish,shutdown,end,logout,log out,shut down,turn off" />
+	</node>
+	<node data="id=4" label="Desktop Applications">
+		<node data="id=201" label="Introduction to Applications" auto_advance="true" auto_start="true" url="introduction/2introtoapp.swf" movieFPS="8" isBranch="true" keywords="application,use,intro,program,navigate" />
+		<node data="id=1101" label="Importing Photos from Directory" auto_advance="true"  url="managing_photos/1importphotosfromdirectory.swf" movieFPS="8" isBranch="true" keywords="manage,photo,browse,view,picture,image,file,import,directory,fspot" />
+		<node data="id=1102" label="Exporting a Photo to Flickr" auto_advance="true"  url="managing_photos/7exportphotowithflickr.swf" movieFPS="8" isBranch="true" keywords="share,flickr,fspot,image,picture,file,photo,export,manage,view" />
+		<node data="id=1201" label="Exploring the Music Player" auto_advance="true"  url="listening_to_audio_files/1explorebanshee.swf" movieFPS="8" isBranch="true" keywords="music,banshee,file,audio,sound,import,cd,mp3,play,library,playlist,disc,listen" />
+		<node data="id=1202" label="Playing a CD Using Banshee" auto_advance="true"  url="listening_to_audio_files/2playingandusingbanshee.swf" movieFPS="8" isBranch="true" keywords="play,use,cd,audio,disc,banshee,import,listen" />
+		<node data="id=1203" label="Accessing and Playing an MP3" auto_advance="true"  url="listening_to_audio_files/3accessandplaymp3.swf" movieFPS="8" isBranch="true" keywords="access,play,music,mp3,file,audio,listen,banshee,locate" />
+		<node data="id=1601" label="Creating a Text Document" auto_advance="true"  url="openoffice/1creatingatextdocument.swf" movieFPS="8" isBranch="true" keywords="text document,writer,document,text,text file,write" />
+		<node data="id=1602" label="Creating a Spreadsheet" auto_advance="true"  url="openoffice/4creatingaspreadsheet.swf" movieFPS="8" isBranch="true" keywords="spreadsheet,calc,create,graph,table,cell" />
+		<node data="id=1603" label="Creating a Presentation" auto_advance="true"  url="openoffice/7creatingapresentation.swf" movieFPS="8" isBranch="true" keywords="presentation,impress,slide,present" />
+		<node data="id=1604" label="Creating a Drawing" auto_advance="true"  url="openoffice/10creatingadrawing.swf" movieFPS="8" isBranch="true" keywords="create,drawing,doodle,blank,new drawing" />
+		<node data="id=1605" label="Working with Microsoft Office files" auto_advance="true"  url="openoffice/interoperability.swf" movieFPS="8" isBranch="true" keywords="open,save,interoperability,microsoft,microsoft office" />		
+
+		<node data="id=1606" label="Creating, Sharing a PDF from an OOo Document" auto_advance="true"  url="openoffice/14savingafiletomicrosoftformat.swf" movieFPS="8" isBranch="true" keywords="export,open,office,document,share,file,pdf,save" />
+	</node>
+	<node data="id=5" label="Internet and E-mail">
+		<node data="id=1301" label="Exploring Firefox" auto_advance="true"  url="browsing_the_web/1exploringfirefox.swf" movieFPS="8" isBranch="true" keywords="browse,web,internet,firefox,mozilla,surf,explore" />
+		<node data="id=1302" label="Using Tabbed Browsing" auto_advance="true"  url="browsing_the_web/8usingtabbedbrowsing.swf" movieFPS="8" isBranch="true" keywords="use tab,tab,browse,mozilla,firerox,explore,internet,web" />
+		<node data="id=1401" label="Configuring Evolution Accounts" auto_advance="true"  url="managing_email/1configureevolutionaccount.swf" movieFPS="8" isBranch="true" keywords="evolution,account,setup,configure,create,new,email,mail,user" />
+		<node data="id=1402" label="Exploring the Evolution Window" auto_advance="true"  url="managing_email/3exploreevolutionwindow.swf" movieFPS="8" isBranch="true" keywords="evolution,email,message,window,browse,explore" />
+		<node data="id=1403" label="Sending E-mail" auto_advance="true"  url="managing_email/4sendingemail.swf" movieFPS="8" isBranch="true" keywords="evolution,email,send,message,address" />
+		<node data="id=1404" label="Attaching Documents" auto_advance="true"  url="managing_email/6attachingdocuments.swf" movieFPS="8" isBranch="true" keywords="attachment,attach,file,email,evolution" />
+		<node data="id=1405" label="Searching for Messages" auto_advance="true"  url="managing_email/10searchingformessages.swf" movieFPS="8" isBranch="true" keywords="search,email,find,locate,evolution,filters,search folder" />		
+		<node data="id=1406" label="Setting Appointments" auto_advance="true"  url="managing_email/18settingappointments.swf" movieFPS="8" isBranch="true" keywords="new appointment,appointment,set,remind,alert,alarm" />	
+		<node data="id=1407" label="Scheduling Meetings" auto_advance="true"  url="managing_email/19settingmeetings.swf" movieFPS="8" isBranch="true" keywords="meeting,busy,calendar,invite,decline,accept" />
+		<node data="id=1501" label="Monitoring Multiple Accounts" auto_advance="true"  url="instant_messaging/1monitormultipleaccounts.swf" movieFPS="8" isBranch="true" keywords="send,instant,instant message,gaim,conversation,buddy list,chat,chatting" />
+		<node data="id=1502" label="Sending an Instant Message" auto_advance="true"  url="instant_messaging/2sendinginstantmessage.swf" movieFPS="8" isBranch="true" keywords="" />
+	</node>
+</node>

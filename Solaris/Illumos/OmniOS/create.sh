@@ -1,2 +1,1 @@
-fallocate -l4G omnios.img
-chattr +C omnios.img
+create_hd_img 4G omnios.img

@@ -1,2 +1,1 @@
-fallocate -l4G nixos.img
-chattr +C nixos.img
+create_hd_img 4G nixos.img

@@ -1,2 +1,1 @@
-fallocate -l4G xandros.img
-chattr +C xandros.img
+create_hd_img 4G xandros.img

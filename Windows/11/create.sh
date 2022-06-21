@@ -1,2 +1,1 @@
-fallocate -l53G win11.img
-chattr +C win11.img
+create_hd_img 53G win11.img

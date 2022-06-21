@@ -1,2 +1,1 @@
-fallocate -l10G netbsd.img
-chattr +C netbsd.img
+create_hd_img 10G netbsd.img

@@ -1,2 +1,1 @@
-fallocate -l4G winme.img
-chattr +C winme.img
+create_hd_img 4G winme.img

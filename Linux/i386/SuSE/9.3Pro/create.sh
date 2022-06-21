@@ -1,2 +1,1 @@
-fallocate -l4G suse.img
-chattr +C suse.img
+create_hd_img 4G suse.img

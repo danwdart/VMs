@@ -1,2 +1,1 @@
-fallocate -l10G opensuse.img
-chattr +C opensuse.img
+create_hd_img 10G opensuse.img

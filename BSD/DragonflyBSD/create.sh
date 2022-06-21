@@ -1,2 +1,1 @@
-fallocate -l10G dfly.img
-chattr +C dfly.img
+create_hd_img 10G dfly.img

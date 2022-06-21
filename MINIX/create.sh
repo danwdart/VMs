@@ -1,2 +1,1 @@
-fallocate -l10G minix.img
-chattr +C minix.img
+create_hd_img 10G minix.img

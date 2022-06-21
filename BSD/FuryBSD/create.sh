@@ -1,2 +1,1 @@
-fallocate -l10G furybsd.img
-chattr +C furybsd.img
+create_hd_img 10G furybsd.img

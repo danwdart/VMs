@@ -1,2 +1,1 @@
-fallocate -l4G win2k.img
-chattr +C win2k.img
+create_hd_img 4G win2k.img

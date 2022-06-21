@@ -1,2 +1,1 @@
-fallocate -l4G hello.img
-chattr +C hello.img
+create_hd_img 4G hello.img
