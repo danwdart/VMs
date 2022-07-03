@@ -3,8 +3,8 @@ runCommand "macOS-intel" {
     buildInputs = [
         dmg2img
         libguestfs-with-appliance
-        python39
-        python39Packages.internetarchive
+        python310
+        python310Packages.internetarchive
         qemu
     ];
 } ""
