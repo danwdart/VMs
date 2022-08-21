@@ -1,6 +1,6 @@
-[submodule "Apple/macOS-intel/OSX-KVM"]
-	path = Apple/macOS-intel/OSX-KVM
+[submodule "Proprietary/Apple/macOS-intel/OSX-KVM"]
+	path = Proprietary/Apple/macOS-intel/OSX-KVM
 	url = https://github.com/kholia/OSX-KVM.git
-[submodule "Apple/macOS-intel/macOS-Simple-KVM"]
-	path = Apple/macOS-intel/macOS-Simple-KVM
+[submodule "Proprietary/Apple/macOS-intel/macOS-Simple-KVM"]
+	path = Proprietary/Apple/macOS-intel/macOS-Simple-KVM
 	url = git@github.com:foxlet/macOS-Simple-KVM.git
