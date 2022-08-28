@@ -1,6 +1,8 @@
 with import <unstable> {};
 runCommand "VMs" {
     shellHook = ''
+        export SCREEN_WIDTH=1920
+        export SCREEN_HEIGHT=1080
         export QEMU_PATH=${qemu.outPath}/share/qemu/
         export OVMF_CODE=$QEMU_PATH/edk2-x86_64-code.fd
         export OVMF_SECURE_CODE=$QEMU_PATH/edk2-x86_64-secure-code.fd
@@ -14,9 +16,9 @@ runCommand "VMs" {
         export QEMU_TPM_EMU="-chardev socket,id=chrtpm,path=tpm0 -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis,tpmdev=tpm0"
         export QEMU_USB="-usb -device usb-kbd -device usb-tablet"
         export QEMU_VIRTIO_PERIPH="-device virtio-keyboard -device virtio-tablet"
-        export QEMU_DISP_GL="-device virtio-vga-gl,xres=1366,yres=768 -display gtk,gl=on"
-        export QEMU_DISP_STD="-device VGA,xres=1366,yres=768,xmax=1366,ymax=768"
-        export QEMU_DISP_QXL="-device qxl-vga,xres=1366,yres=768"
+        export QEMU_DISP_GL="-device virtio-vga-gl,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT -display gtk,gl=on"
+        export QEMU_DISP_STD="-device VGA,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT,xmax=$SCREEN_WIDTH,ymax=$SCREEN_HEIGHT"
+        export QEMU_DISP_QXL="-device qxl-vga,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT"
         export QEMU_OVMF="-drive file=$OVMF_CODE,if=pflash,format=raw,readonly=on -drive file=edk2-i386-vars.fd,if=pflash,format=raw"
         export QEMU_AAVMF="-drive file=$AAVMF_CODE,if=pflash,format=raw,readonly=on -drive file=edk2-arm-vars.fd,if=pflash,format=raw"
         export QEMU_SECURE_OVMF="-drive file=$OVMF_SECURE_CODE,if=pflash,format=raw,readonly=on -drive file=edk2-i386-vars.fd,if=pflash,format=raw"
