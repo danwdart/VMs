@@ -23,10 +23,12 @@ runCommand "VMs" {
         export QEMU_AAVMF="-drive file=$AAVMF_CODE,if=pflash,format=raw,readonly=on -drive file=edk2-arm-vars.fd,if=pflash,format=raw"
         export QEMU_SECURE_OVMF="-drive file=$OVMF_SECURE_CODE,if=pflash,format=raw,readonly=on -drive file=edk2-i386-vars.fd,if=pflash,format=raw"
         export QEMU_BALLOON="-device virtio-balloon-pci,deflate-on-oom=true"
+        export QEMU_RNG="-object rng-random,filename=/dev/urandom,id=rng -device virtio-rng-device,rng=rng"
         export QEMU_I386="qemu-system-i386 -enable-kvm"
         export QEMU_RPI3B="qemu-system-aarch64 -M raspi3b -m 1G -cpu cortex-a53 -serial stdio -smp 4 $QEMU_USB -device usb-net"
         export QEMU_AARCH64="qemu-system-aarch64 -M virt -m 4G -cpu cortex-a72 -serial stdio -smp 4 $QEMU_VIRTIO_PERIPH -device virtio-net $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
         VMSDIR=$(pwd)
+        export QEMU_RISCV64="qemu-system-riscv64 -M virt -m 2G -cpu rv64 -smp cores=4,threads=2"
         find -name "*.sh" -exec sh -c '
             DIRNAME="$(dirname "{}")"
             [ -f "$DIRNAME/edk2-i386-vars.fd" ] || cp --no-preserve=mode,ownership $OVMF_VARS "$DIRNAME"
