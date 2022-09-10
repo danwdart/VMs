@@ -1,2 +1,2 @@
 #!/bin/sh
-qemu-system-i386 reactos.img -cdrom reactos*x86*.iso -m 128 -enable-kvm -cpu host -usb -device usb-tablet -device usb-kbd -monitor stdio
+$QEMU_I386 reactos.img -cdrom reactos*x86*.iso -m 512 -cpu host $QEMU_USB $QEMU_DISP_STD -monitor stdio
