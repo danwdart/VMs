@@ -10,8 +10,8 @@ runCommand "VMs" {
         export AAVMF_CODE=$QEMU_PATH/edk2-aarch64-code.fd
         export AAVMF_VARS=$QEMU_PATH/edk2-arm-vars.fd
         export QEMU_X86="qemu-system-i386 -M q35 -enable-kvm -cpu host -smp cores=2,threads=2"
-        export QEMU_X86_64="qemu-system-x86_64 -M q35 -enable-kvm -cpu host -smp cores=2,threads=2"
-        export QEMU_X86_64_NETBSD="qemu-system-x86_64 -M q35 -enable-kvm -cpu qemu64 -smp cores=2,threads=2"
+        export QEMU_X86_64="qemu-system-x86_64 -M q35 -enable-kvm -cpu host -smp cores=4,threads=2"
+        export QEMU_X86_64_NETBSD="qemu-system-x86_64 -M q35 -enable-kvm -cpu host,sse2=off -smp cores=4,threads=2"
         export QEMU_TPM="-tpmdev passthrough,id=tpm0,path=/dev/tpm0 -device tpm-tis,tpmdev=tpm0"
         export QEMU_TPM_EMU="-chardev socket,id=chrtpm,path=tpm0 -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis,tpmdev=tpm0"
         export QEMU_USB="-usb -device usb-kbd -device usb-tablet"
