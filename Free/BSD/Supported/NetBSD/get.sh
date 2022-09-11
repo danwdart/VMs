@@ -1,2 +1,2 @@
 get_installer
-gunzip NetBSD-9.2-amd64-install.img.gz
+gunzip NetBSD-9.3-amd64-install.img.gz
