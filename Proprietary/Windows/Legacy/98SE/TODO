@@ -1,10 +1,15 @@
 Mesa
+ide
+    slow as all hell but great for compatibility
 virtio
     Virtio ok in stage 1 (real mode presumed), stage 2 errors horribly (protected mode?)
     copying to ide produced overflow error?
+    Starts up fine from installed though!
 scsi supported
     no known driver, but scsi runs in real mode
 usb boot
     bsods on the drums, stage 2, then dies since this
+    very fast
+    startup not always reliable
 sata
-    fast!
+    fast! good!
