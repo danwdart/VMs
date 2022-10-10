@@ -1,0 +1,10 @@
+Mesa
+virtio
+    Virtio ok in stage 1 (real mode presumed), stage 2 errors horribly (protected mode?)
+    copying to ide produced overflow error?
+scsi supported
+    no known driver, but scsi runs in real mode
+usb boot
+    bsods on the drums, stage 2, then dies since this
+sata
+    fast!

@@ -1,1 +1,1 @@
-qemu-system-i386 -enable-kvm -cpu pentium3 -m 64 -usb -device usb-tablet -device sb16 -nic user,model=ne2k_pci -no-hpet -cdrom win98se.iso -monitor stdio win98se.img
+$QEMU_X86_64 -m 512 $QEMU_DISP_STD -device usb-audio -usb -device usb-tablet -nic user,model=ne2k_pci -no-hpet -monitor stdio -drive file=win98se.img $@
