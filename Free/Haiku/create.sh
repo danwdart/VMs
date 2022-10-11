@@ -1,1 +1,1 @@
-create_hd_img 1G haiku.img
+create_hd_img 4G haiku.img
