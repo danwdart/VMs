@@ -9,4 +9,5 @@
 *.fd
 *.aria2
 *.part
+*.rom
 .direnv
