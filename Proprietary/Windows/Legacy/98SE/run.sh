@@ -1,1 +1,1 @@
-$QEMU_X86_64 -m 512 $QEMU_DISP_STD -device usb-audio -usb -device usb-tablet -nic user,model=ne2k_pci -no-hpet -monitor stdio -drive file=win98se.img $@
+$QEMU_I386 -m 512 $QEMU_DISP_STD -device usb-audio -usb -device usb-tablet -nic user,model=ne2k_pci -no-hpet -monitor stdio -drive file=win98se.img $@
