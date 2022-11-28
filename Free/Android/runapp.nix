@@ -11,7 +11,7 @@ in androidenv.emulateApp {
   # useGoogleAPIs = false;
   enableGPU = true;
   abiVersion = "x86_64";
-  
+
   package = "";
   activity = "";
 
