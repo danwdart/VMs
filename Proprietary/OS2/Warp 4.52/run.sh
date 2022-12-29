@@ -1,0 +1,1 @@
+$QEMU_I386 -m 512 -monitor stdio -drive file=os2.img $@
