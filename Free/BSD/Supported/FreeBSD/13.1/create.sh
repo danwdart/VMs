@@ -1,1 +1,1 @@
-create_hd_img 10G freebsd.img
+create_hd_img 5G freebsd.img
