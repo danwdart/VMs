@@ -8,6 +8,7 @@
 *.qcow2
 *.fd
 *.aria2
+*.torrent
 *.part
 *.rom
 .direnv
