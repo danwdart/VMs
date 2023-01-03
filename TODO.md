@@ -1,1 +1,6 @@
-# Updates!
+- [ ] Updates
+- [ ] Optional "extra" software ISOs
+- [ ] Some kind of launcher perhaps, not having to add shell scripts maybe.
+- [ ] Web interface?
+- [ ] Does virt-manager have the ability to download / automate installs?
+- [ ] Sort by processor / release date / level "unsupported"?
