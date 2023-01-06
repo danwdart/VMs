@@ -12,13 +12,17 @@ sudo mount /dev/loop0p1 hd
 
 sudo mkdir -p hd/utils
 cd hd/utils
+
 sudo mkdir 98utils
 cd 98utils
 sudo 7z x ../../../98utils.iso
-cd ..
-sudo mkdir mesa
-cd mesa
-sudo 7z x ../../../mesa.iso
+
+# cd ..
+
+# sudo mkdir mesa
+# cd mesa
+# sudo 7z x ../../../mesa.iso
+
 cd ../../..
 
 sudo mount win98se.iso cd
