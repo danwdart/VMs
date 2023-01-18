@@ -1,1 +1,1 @@
-qemu-system-ppc64 -M mac99,via=pmu-adb -m 512 -cpu 970fx -drive file=dualboot.img,format=raw -drive file="debian-11.0.0-ppc64-NETINST-1.iso",media=cdrom,format=raw -nic model=sungem -boot d -monitor stdio -g 800x600x32
+qemu-system-ppc64 -M mac99,via=pmu-adb -m 512 -cpu 970fx -drive file=dualboot.img,format=raw -drive file="debian-11.0.0-ppc64-NETINST-1.iso",media=cdrom,format=raw -nic model=sungem -boot d -monitor stdio -g 1440x900x32
