@@ -1,1 +1,1 @@
-create_hd_img 100M fd.img
+create_hd_img 4G fd.img

@@ -1,3 +1,4 @@
-qemu-system-i386 -m 32 $QEMU_DISP_STD $QEMU_USB \
-    -device usb-storage,drive=hd -drive file=fd.img,if=none,id=hd,format=raw \
-    -device usb-storage,drive=usb -drive file=FD13FULL.img,if=none,id=usb,format=raw
+$QEMU_I386 -m 128 $QEMU_DISP_STD -device qemu-xhci $QEMU_USB \
+    -drive file=fd.img,id=hd,format=raw \
+    -drive file=FD13FULL.img,id=install,format=raw \
+    -boot menu=on
