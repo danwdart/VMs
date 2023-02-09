@@ -4,8 +4,8 @@
 [submodule "Proprietary/Apple/macOS-intel/macOS-Simple-KVM"]
 	path = Proprietary/Apple/macOS-intel/macOS-Simple-KVM
 	url = git@github.com:foxlet/macOS-Simple-KVM.git
-[submodule "Free/Linux/x86_64/stali/root"]
-	path = Free/Linux/x86_64/stali/root
+[submodule "Free/Linux/x86_64/stali/rootfs-x86_64"]
+	path = Free/Linux/x86_64/stali/rootfs-x86_64
 	url = http://git.sta.li/rootfs-x86_64
 [submodule "Free/Linux/x86_64/stali/stali-iso"]
 	path = Free/Linux/x86_64/stali/stali-iso
