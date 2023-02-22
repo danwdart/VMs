@@ -3,10 +3,10 @@ runCommand "macOS-intel" {
     buildInputs = [
         dmg2img
         libguestfs-with-appliance
-        python310
-        python310Packages.internetarchive
-        python310Packages.pip
-        python310Packages.click
+        python312
+        python312Packages.internetarchive
+        python312Packages.pip
+        python312Packages.click
         qemu
     ];
 } ""
