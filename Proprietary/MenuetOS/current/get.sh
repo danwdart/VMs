@@ -1,4 +1,4 @@
 get_installer
-unzip M6414490.zip
-unzip mp121.zip
+unzip M*.zip
+unzip mp*.zip
 rm *.zip LICENSE.TXT
