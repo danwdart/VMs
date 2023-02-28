@@ -1,0 +1,1 @@
+qemu-system-x86_64 -enable-kvm -m 2048 -cpu host,migratable=off -device qemu-xhci -device usb-kbd -device usb-tablet -drive id=hdd,file=image,format=raw,if=none -device virtio-blk-pci,drive=hdd -vga vmware -debugcon stdio
