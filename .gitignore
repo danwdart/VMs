@@ -12,3 +12,4 @@
 *.part
 *.rom
 .direnv
+.DS_Store

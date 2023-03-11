@@ -1,4 +1,4 @@
-with import <unstable> {};
+with import <nixpkgs> {};
 runCommand "VMs" {
     shellHook = ''
         export SCREEN_WIDTH=1920
@@ -39,7 +39,7 @@ runCommand "VMs" {
         find -name "*.sh" -exec sh -c '
             DIRNAME="$(dirname "{}")"
             [ -f "$DIRNAME/edk2-i386-vars.fd" ] || cp --no-preserve=mode,ownership $OVMF_VARS "$DIRNAME"
-            # [ -f "$DIRNAME/edk2-arm-vars.fd" ] || cp --no-preserve=mode,ownership $AAVMF_VARS "$DIRNAME"
+            [ -f "$DIRNAME/edk2-arm-vars.fd" ] || cp --no-preserve=mode,ownership $AAVMF_VARS "$DIRNAME"
         ' \;
         export PATH=$PWD/.bin:$PATH
     '';
@@ -49,8 +49,11 @@ runCommand "VMs" {
         cabextract
         chntpw
         wimlib
+    ] ++ (if builtins.currentSystem == "aarch64-darwin" then [
+
+    ] else [
         swtpm
         tpm2-tools
         win-virtio
-    ];
+    ]);
 } ""
