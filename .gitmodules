@@ -10,3 +10,9 @@
 [submodule "Free/Linux/x86_64/stali/stali-iso"]
 	path = Free/Linux/x86_64/stali/stali-iso
 	url = https://gitlab.com/garbeam/stali-iso.git
+[submodule "Proprietary/Apple/aarch64/xnu-qemu-arm64-tools"]
+	path = Proprietary/Apple/aarch64/xnu-qemu-arm64-tools
+	url = https://github.com/alephsecurity/xnu-qemu-arm64-tools.git
+[submodule "Proprietary/Apple/aarch64/macos-arm64-emulation"]
+	path = Proprietary/Apple/aarch64/macos-arm64-emulation
+	url = https://github.com/cylance/macos-arm64-emulation.git
