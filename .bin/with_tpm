@@ -1,0 +1,8 @@
+#!/bin/sh
+trap hangup_tpm INT
+mkdir tpm
+swtpm socket --tpmstate dir=$PWD/tpm --tpm2 --ctrl type=unixio,path=tpm0 --log level=20 &
+SWTPM_PID=$!
+$1
+QEMU_PID=$!
+wait

@@ -2,7 +2,6 @@
 *.img
 *.7z
 *.xz
-*.bin
 *.zst
 *.img.gz
 *.qcow2

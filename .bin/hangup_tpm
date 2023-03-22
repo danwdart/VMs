@@ -1,0 +1,6 @@
+#!/bin/sh
+echo Hanging up processes...
+kill -HUP $SWTPM_PID
+kill -HUP $QEMU_PID
+echo "Removing socket file..."
+rm -rf tpm0
