@@ -1,4 +1,5 @@
 qemu-system-aarch64 -M virt,accel=hvf -m 8G -cpu host -serial stdio -smp cores=8 \
+    -no-acpi \
     -boot menu=on \
     -device ich9-intel-hda \
     -device hda-micro \
@@ -6,9 +7,7 @@ qemu-system-aarch64 -M virt,accel=hvf -m 8G -cpu host -serial stdio -smp cores=8
     $QEMU_VIRTIO_PERIPH \
     -device virtio-gpu-pci,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT \
     $QEMU_AAVMF \
-    -drive file=NetBSD-9.3-evbarm-aarch64.iso,if=none,id=cd \
     -drive file=netbsd.img,if=none,id=hd \
-    -drive file=fat:efi,id=boot,if=none,readonly=on \
+    -drive file=arm64.img,id=install,if=none,readonly=on \
     -device virtio-blk-device,drive=hd \
-    -device virtio-blk-device,drive=cd \
-    -device virtio-blk-device,drive=boot
+    -device virtio-blk-device,drive=install
