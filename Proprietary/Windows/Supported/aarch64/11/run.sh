@@ -1,17 +1,20 @@
 qemu-system-aarch64 -M virt,highmem=off \
     -accel hvf \
-    -m 3G -cpu cortex-a76 -serial stdio -smp cores=4 \
+    -m 3G -cpu cortex-a57 -serial stdio -smp 3 \
     -boot menu=on \
     -device intel-hda \
     -device hda-duplex \
-    -device ramfb \
+    -device virtio-gpu-pci \
     -device qemu-xhci \
     $QEMU_USB \
     -display cocoa,show-cursor=on \
-    -drive file=win11.qcow2,if=none,id=hd \
-    -device nvme,drive=hd,serial=hd \
-    -drive file=pflash0.img,format=raw,if=pflash,readonly=on \
-    -drive file=pflash1.img,format=raw,if=pflash
+    -drive file=win11.qcow2,if=none,format=qcow2,id=install \
+    -device usb-storage,drive=install,serial=install \
+    -drive file=system.vhdx,if=none,format=vhdx,id=system \
+    -device virtio-blk,drive=system,serial=system \
+    -drive file=drivers.vhdx,if=none,format=vhdx,id=drivers,readonly=on \
+    -device usb-storage,drive=drivers,serial=drivers \
+    $QEMU_AAVMF
 
 
     # $QEMU_AAVMF \
