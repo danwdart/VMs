@@ -1,4 +1,5 @@
-qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=8 \
+sudo diskutil unmountDisk /dev/rdisk4
+sudo qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=8 \
     -boot menu=on \
     -device ich9-intel-hda \
     -device hda-micro \
@@ -8,4 +9,6 @@ qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=
     $QEMU_AAVMF \
     -drive file=nixos.img,if=none,id=hd \
     -device virtio-blk-device,drive=hd \
+    -drive file=/dev/rdisk4,format=raw,if=none,id=sd \
+    -device virtio-blk-device,drive=sd \
     -device virtio-net

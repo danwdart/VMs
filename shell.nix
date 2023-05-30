@@ -21,7 +21,7 @@ runCommand "VMs" {
         export QEMU_X86_64_NETBSD_MACOS="qemu-system-x86_64 -M q35 -cpu qemu64,sse2=off -smp cores=8"
         export QEMU_RPI3B="qemu-system-aarch64 -M raspi3b -m 1G -cpu cortex-a53 -serial stdio -smp cores=4,threads=2 $QEMU_USB -device usb-net"
         export QEMU_AARCH64="qemu-system-aarch64 -M virt -m 4G -cpu cortex-a72 -serial stdio -smp cores=4,threads=2 $QEMU_VIRTIO_PERIPH -device virtio-net $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
-        export QEMU_AARCH64_MACOS="qemu-system-aarch64 -M virt,accel=hvf -m 8G -cpu host -serial stdio -smp cores=4,threads=2 $QEMU_VIRTIO_PERIPH -device virtio-net $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
+        export QEMU_AARCH64_MACOS="qemu-system-aarch64 -M virt,accel=hvf -m 8G -cpu host -serial stdio -smp cores=4,threads=2 $QEMU_VIRTIO_PERIPH $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
         VMSDIR=$(pwd)
         export QEMU_RISCV64="qemu-system-riscv64 -M virt -m 2G -cpu rv64 -smp cores=4,threads=2"
         export QEMU_TPM="-tpmdev passthrough,id=tpm0,path=/dev/tpm0 -device tpm-tis,tpmdev=tpm0"
