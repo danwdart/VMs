@@ -1,1 +1,1 @@
-qemu-system-i386 -M q35 sled.img -cdrom SuseLinux.001.iso -usb -device usb-tablet -device usb-kbd -m 512 -cpu host -enable-kvm -smp cores=4
+$QEMU_X86 sled.img -cdrom SuseLinux.001.iso $QEMU_USB2 -m 512

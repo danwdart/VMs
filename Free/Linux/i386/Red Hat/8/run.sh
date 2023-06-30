@@ -1,1 +1,1 @@
-qemu-system-i386 -enable-kvm -cpu pentium3 -m 256 redhat.img -cdrom psyche-i386-disc1.iso -nic user,model=ne2k_pci -usb -device usb-tablet
+$QEMU_I386 -cpu pentium3 -m 256 redhat.img -cdrom psyche-i386-disc1.iso -nic user,model=ne2k_pci -usb -device usb-tablet
