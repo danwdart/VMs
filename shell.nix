@@ -26,7 +26,7 @@ runCommand "VMs" {
         export QEMU_X86_64="qemu-system-x86_64 ${params_x86_64} -smp cores=4,threads=2"
         export QEMU_X86_64_NETBSD="qemu-system-x86_64 ${params_x86_64},sse2=off -smp cores=4,threads=2"
         export QEMU_RPI3B="qemu-system-aarch64 -M raspi3b -m 1G -cpu cortex-a53 -serial stdio -smp cores=4,threads=2 $QEMU_USB -device usb-net"
-        export QEMU_AARCH64="qemu-system-aarch64 ${params_aarch64} -serial stdio -smp cores=4,threads=2 $QEMU_VIRTIO_PERIPH -device virtio-net $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
+        export QEMU_AARCH64="qemu-system-aarch64 ${params_aarch64} -serial stdio -smp cores=12,threads=2 $QEMU_VIRTIO_PERIPH -device virtio-net $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
         VMSDIR=$(pwd)
         export QEMU_RISCV64="qemu-system-riscv64 -M virt -m 2G -cpu rv64 -smp cores=4,threads=2"
         export QEMU_TPM="-tpmdev passthrough,id=tpm0,path=/dev/tpm0 -device tpm-tis,tpmdev=tpm0"
@@ -47,7 +47,7 @@ runCommand "VMs" {
         export QEMU_SECURE_OVMF="-drive file=$OVMF_SECURE_CODE,if=pflash,format=raw,readonly=on -drive file=edk2-i386-vars.fd,if=pflash,format=raw"
         export QEMU_BALLOON="-device virtio-balloon-pci,deflate-on-oom=true"
         export QEMU_RNG="-object rng-random,filename=/dev/urandom,id=rng -device virtio-rng-device,rng=rng"
-        export QEMU_SND="-device ich9-intel-hda -device hda-micro""
+        export QEMU_SND="-device ich9-intel-hda -device hda-micro"
         [ -f "vbios_gvt_uefi.rom" ] || aria2c -s16 -j16 -x16 -k1M --content-disposition -c https://web.archive.org/web/20201020144354/http://120.25.59.132:3000/vbios_gvt_uefi.rom
         find -name "*.sh" -exec sh -c '
             DIRNAME="$(dirname "{}")"
