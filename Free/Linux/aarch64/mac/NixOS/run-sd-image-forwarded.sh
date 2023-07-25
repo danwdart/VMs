@@ -8,8 +8,7 @@ qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=
     $QEMU_AAVMF \
     -drive file=nixos.img,if=none,id=hd \
     -device virtio-blk-device,drive=hd \
-    -device virtio-net \
-    -device qemu-xhci \
-    -device usb-host,vendorid=0x1d50,productid=0x6089 \
-    -device usb-host,vendorid=0x1fc9,productid=0x000c \
+    -drive file=sd.img,format=raw,if=none,id=sd \
+    -device virtio-blk-device,drive=sd \
+    -nic user,model=virtio-net-pci,hostfwd=tcp::2222-:22 \
     -boot menu=on
