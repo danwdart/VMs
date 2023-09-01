@@ -12,5 +12,5 @@ sudo qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp c
     -device virtio-blk-device,drive=hd \
     -drive file=/dev/rdisk4,format=raw,if=none,id=sd \
     -device virtio-blk-device,drive=sd \
-    -device virtio-net \
+    -nic user,model=virtio-net-pci \
     -boot menu=on

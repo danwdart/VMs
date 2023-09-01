@@ -11,5 +11,5 @@ qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=
     -device virtio-blk-device,drive=hd \
     -drive file=sd.img,format=raw,if=none,id=sd \
     -device virtio-blk-device,drive=sd \
-    -device virtio-net \
+    -nic user,model=virtio-net-pci \
     -boot menu=on
