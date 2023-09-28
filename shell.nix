@@ -64,10 +64,10 @@ runCommand "VMs" {
         chntpw
         wimlib
         util-linux # for sfdisk
+        swtpm
     ] ++ (if builtins.currentSystem == "aarch64-darwin" then [
 
     ] else [
-        swtpm
         tpm2-tools
         win-virtio
     ]);
