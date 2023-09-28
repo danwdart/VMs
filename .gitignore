@@ -12,3 +12,4 @@
 *.rom
 .direnv
 .DS_Store
+tpm
