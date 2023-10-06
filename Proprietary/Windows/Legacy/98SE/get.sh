@@ -1,4 +1,6 @@
 #!/bin/sh
+set -euo pipefail
+
 mkiso() {
     # ia download --no-directories windows-98-se-english-oem "Win98 SE.iso"
     7z e "Microsoft Windows 98 Second Edition.7z" "Microsoft Windows 98 Second Edition/Windows 98 Second Edition.iso" win98.iso
