@@ -1,3 +1,9 @@
 #!/bin/sh
+if [[ "$(uname -o)" == "Darwin" ]]
+then
+    qemu-img create $2 $1
+    exit 0
+fi
+
 fallocate -l$1 $2
 chattr +C $2
