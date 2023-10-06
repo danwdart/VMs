@@ -5,7 +5,7 @@ qemu-system-aarch64 -M virt,highmem=off \
     -device intel-hda \
     -device hda-duplex \
     -device virtio-gpu-pci,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT \
-    -device qemu-xhci \
+    $QEMU_USB \
     $QEMU_VIRTIO_PERIPH \
     -display cocoa \
     -drive file=win11.qcow2,if=none,format=qcow2,id=hd \

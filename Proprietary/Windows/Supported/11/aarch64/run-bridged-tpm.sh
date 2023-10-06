@@ -1,13 +1,13 @@
 mkdir -p tpm
 swtpm socket --tpmstate dir=$PWD/tpm --tpm2 --ctrl type=unixio,path=tpm0 --log level=20 &
 SWTPM_PID=$!
-sudo qemu-system-aarch64 -M virt,accel=hvf,gic-version=3 \
+sudo qemu-system-aarch64 -M virt,accel=hvf \
     -m 8G -cpu max -serial stdio -smp cores=8 \
     -boot menu=on \
     -device intel-hda \
     -device hda-duplex \
     -device virtio-gpu-pci,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT \
-    -device qemu-xhci \
+    $QEMU_USB \
     $QEMU_VIRTIO_PERIPH \
     -display cocoa \
     -drive file=win11.qcow2,if=none,format=qcow2,id=hd \
