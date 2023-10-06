@@ -10,8 +10,8 @@ let display = if builtins.currentSystem == "aarch64-darwin" then "cocoa,show-cur
 in
 runCommand "VMs" {
     shellHook = ''
-        export SCREEN_WIDTH=1920
-        export SCREEN_HEIGHT=1080
+        export SCREEN_WIDTH=1728
+        export SCREEN_HEIGHT=1117
         export GVT_UUID=f3391b14-5221-11ed-ba3d-6b25560d08e7
         export QEMU_PATH=${qemu.outPath}/share/qemu/
         export ROOT_PATH=$(pwd)
@@ -34,8 +34,8 @@ runCommand "VMs" {
         export QEMU_USB2="-usb -device usb-kbd -device usb-tablet"
         export QEMU_USB="-device qemu-xhci $QEMU_USB2"
         export QEMU_VIRTIO_PERIPH="-device virtio-keyboard -device virtio-tablet"
-        export QEMU_DISP_GVT="-device vfio-pci,sysfsdev=/sys/bus/mdev/devices/$GVT_UUID,display=on,x-igd-opregion=on,driver=vfio-pci-nohotplug,ramfb=on,xres=1920,yres=1080  -display  ${display},gl=on"
-        export QEMU_DISP_GVT_OVMF="-device vfio-pci,sysfsdev=/sys/bus/mdev/devices/$GVT_UUID,display=on,x-igd-opregion=on,driver=vfio-pci-nohotplug,ramfb=on,driver=vfio-pci-nohotplug,romfile=$ROOT_PATH/vbios_gvt_uefi.rom,xres=1920,yres=1080 -display  ${display},gl=on"
+        export QEMU_DISP_GVT="-device vfio-pci,sysfsdev=/sys/bus/mdev/devices/$GVT_UUID,display=on,x-igd-opregion=on,driver=vfio-pci-nohotplug,ramfb=on,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT -display ${display},gl=on"
+        export QEMU_DISP_GVT_OVMF="-device vfio-pci,sysfsdev=/sys/bus/mdev/devices/$GVT_UUID,display=on,x-igd-opregion=on,driver=vfio-pci-nohotplug,ramfb=on,driver=vfio-pci-nohotplug,romfile=$ROOT_PATH/vbios_gvt_uefi.rom,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT -display ${display},gl=on"
         export QEMU_DISP_GL="-device virtio-vga-gl,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT -display ${display},gl=on"
         export QEMU_DISP_GPU_GL="-device virtio-gpu-pci,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT -display ${display}"
         export QEMU_DISP_STD="-device VGA,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT,xmax=$SCREEN_WIDTH,ymax=$SCREEN_HEIGHT,vgamem_mb=128 -display ${display}"
