@@ -10,6 +10,6 @@ cd 311utils
 cd ..
 rm amnhltm.zip
 dd if=/dev/zero of=311utils.img count=2880
-mkfs.msdos 311utils.img
+mformat -i 311utils.img
 mcopy -i 311utils.img 311utils/* ::/
 rm -rf 311utils
