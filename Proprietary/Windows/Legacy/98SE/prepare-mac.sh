@@ -3,8 +3,7 @@ set -euo pipefail
 
 mkdir -p cd hd # fd
 
-qemu-img create -f raw win98se.img 4G
-# ./create.sh
+./create.sh
 sfdisk win98se.img < sfdisk.conf
 hdiutil attach -nomount win98se.img
 # sudo mount boot.img fd
