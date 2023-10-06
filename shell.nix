@@ -20,15 +20,16 @@ runCommand "VMs" {
         export OVMF_VARS=$QEMU_PATH/edk2-i386-vars.fd
         export AAVMF_CODE=$QEMU_PATH/edk2-aarch64-code.fd
         export AAVMF_VARS=$QEMU_PATH/edk2-arm-vars.fd
-        export QEMU_I386="qemu-system-i386 ${params_i386}"
-        export QEMU_486="qemu-system-i386 ${params_486}"
-        export QEMU_X86="qemu-system-i386 ${params_x86} -smp cores=4,threads=2"
-        export QEMU_X86_64="qemu-system-x86_64 ${params_x86_64} -smp cores=4,threads=2"
-        export QEMU_X86_64_NETBSD="qemu-system-x86_64 ${params_x86_64},sse2=off -smp cores=4,threads=2"
-        export QEMU_RPI3B="qemu-system-aarch64 -M raspi3b -m 1G -cpu cortex-a53 -serial stdio -smp cores=4,threads=2 $QEMU_USB -device usb-net"
-        export QEMU_AARCH64="qemu-system-aarch64 ${params_aarch64} -serial stdio -smp cores=12,threads=2 $QEMU_VIRTIO_PERIPH -device virtio-net $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
+        export QEMU_ALWAYS="-k en-gb"
+        export QEMU_I386="qemu-system-i386 $QEMU_ALWAYS ${params_i386}"
+        export QEMU_486="qemu-system-i386 $QEMU_ALWAYS ${params_486}"
+        export QEMU_X86="qemu-system-i386 $QEMU_ALWAYS ${params_x86} -smp cores=4,threads=2"
+        export QEMU_X86_64="qemu-system-x86_64 $QEMU_ALWAYS ${params_x86_64} -smp cores=4,threads=2"
+        export QEMU_X86_64_NETBSD="qemu-system-x86_64 $QEMU_ALWAYS ${params_x86_64},sse2=off -smp cores=4,threads=2"
+        export QEMU_RPI3B="qemu-system-aarch64 $QEMU_ALWAYS -M raspi3b -m 1G -cpu cortex-a53 -serial stdio -smp cores=4,threads=2 $QEMU_USB -device usb-net"
+        export QEMU_AARCH64="qemu-system-aarch64 $QEMU_ALWAYS ${params_aarch64} -serial stdio -smp cores=12,threads=2 $QEMU_VIRTIO_PERIPH -device virtio-net $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
         VMSDIR=$(pwd)
-        export QEMU_RISCV64="qemu-system-riscv64 -M virt -m 2G -cpu rv64 -smp cores=4,threads=2"
+        export QEMU_RISCV64="qemu-system-riscv64 $QEMU_ALWAYS -M virt -m 2G -cpu rv64 -smp cores=4,threads=2"
         export QEMU_TPM="-tpmdev passthrough,id=tpm0,path=/dev/tpm0 -device tpm-tis,tpmdev=tpm0"
         export QEMU_TPM_EMU="-chardev socket,id=chrtpm,path=tpm0 -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis,tpmdev=tpm0"
         export QEMU_USB2="-usb -device usb-kbd -device usb-tablet"
