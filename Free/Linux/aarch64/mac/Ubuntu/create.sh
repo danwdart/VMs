@@ -1,0 +1,1 @@
+qemu-img create -fraw ubuntu.img 16G 
