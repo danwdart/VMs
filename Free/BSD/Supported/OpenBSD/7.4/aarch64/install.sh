@@ -1,0 +1,1 @@
+$QEMU_AARCH64 openbsd.img $QEMU_USB -device usb-storage,drive=installer -drive file=install74.img,if=none,id=installer -device virtio-gpu-pci,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT -boot menu=on -m 2048 $QEMU_AAVMF
