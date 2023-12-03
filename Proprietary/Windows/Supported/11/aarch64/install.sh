@@ -32,4 +32,4 @@ qemu-system-aarch64 -M virt,highmem=off,accel=hvf \
 
     # $QEMU_AAVMF \
     # cortex-a55
-    # -device virtio-gpu-pci,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT \
+    # $QEMU_DISP_GPU_GL \

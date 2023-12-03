@@ -4,7 +4,7 @@ qemu-system-aarch64 -M virt,highmem=off \
     -boot menu=on \
     -device intel-hda \
     -device hda-duplex \
-    -device virtio-gpu-pci,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT \
+    $QEMU_DISP_GPU_GL \
     $QEMU_USB \
     $QEMU_VIRTIO_PERIPH \
     -display cocoa \
@@ -34,4 +34,4 @@ qemu-system-aarch64 -M virt,highmem=off \
 
     # $QEMU_AAVMF \
     # cortex-a55
-    # -device virtio-gpu-pci,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT \
+    # $QEMU_DISP_GPU_GL \

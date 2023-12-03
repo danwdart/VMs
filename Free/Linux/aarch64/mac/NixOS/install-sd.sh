@@ -6,7 +6,7 @@ sudo qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp c
     $QEMU_VIRTIO_PERIPH \
     $QEMU_USB \
     $QEMU_BALLOON \
-    -device virtio-gpu-pci,xres=$SCREEN_WIDTH,yres=$SCREEN_HEIGHT \
+    $QEMU_DISP_GPU_GL \
     $QEMU_AAVMF \
     -drive file=nixos-plasma5-24.05pre554114.e92039b55bcd-aarch64-linux.iso,if=none,id=cd \
     -drive file=/dev/rdisk4,format=raw,if=none,id=sd \
