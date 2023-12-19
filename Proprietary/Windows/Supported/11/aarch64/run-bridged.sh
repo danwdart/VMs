@@ -1,7 +1,6 @@
 sudo qemu-system-aarch64 -M virt,highmem=off \
     -accel hvf \
     -m 3G -cpu cortex-a57 -serial stdio -smp 3 \
-    -boot menu=on \
     -device intel-hda \
     -device hda-duplex \
     $QEMU_DISP_GPU_GL \
@@ -11,8 +10,8 @@ sudo qemu-system-aarch64 -M virt,highmem=off \
     -drive file=win11.qcow2,if=none,format=qcow2,id=hd \
     -device usb-storage,drive=hd,serial=hd \
     -nic vmnet-bridged,ifname=en0,model=virtio-net-pci \
-    $QEMU_AAVMF \
-    -boot menu=on
+    $QEMU_AAVMF
+    # -boot menu=on \
     # -device usb-net \
     # -nic vmnet-bridged,ifname=en0,model=ne2k_pci \
     # ,show-cursor=on \

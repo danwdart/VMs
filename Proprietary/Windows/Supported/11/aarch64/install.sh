@@ -1,6 +1,5 @@
 qemu-system-aarch64 -M virt,highmem=off,accel=hvf \
     -m 3G -cpu cortex-a57 -serial stdio -smp 3 \
-    -boot menu=on \
     -device intel-hda \
     -device hda-duplex \
     -device ramfb \
@@ -11,6 +10,7 @@ qemu-system-aarch64 -M virt,highmem=off,accel=hvf \
     -drive file=virtio-win-0.1.240.iso,format=raw,id=drivers,if=none,media=cdrom \
     -device usb-storage,drive=drivers,serial=drivers \
     $QEMU_AAVMF
+    # \ -boot menu=on \
     # -device usb-net \
     # -nic vmnet-bridged,ifname=en0,model=ne2k_pci \
     # ,show-cursor=on \

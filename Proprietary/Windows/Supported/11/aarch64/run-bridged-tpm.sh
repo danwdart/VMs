@@ -3,7 +3,6 @@ swtpm socket --tpmstate dir=$PWD/tpm --tpm2 --ctrl type=unixio,path=tpm0 --log l
 SWTPM_PID=$!
 sudo qemu-system-aarch64 -M virt,accel=hvf \
     -m 8G -cpu max -serial stdio -smp cores=8 \
-    -boot menu=on \
     -device intel-hda \
     -device hda-duplex \
     $QEMU_DISP_GPU_GL \
@@ -14,10 +13,10 @@ sudo qemu-system-aarch64 -M virt,accel=hvf \
     -device usb-storage,drive=hd,serial=hd \
     -nic vmnet-bridged,ifname=en0,model=virtio-net-pci \
     $QEMU_AAVMF \
-    -chardev socket,id=chrtpm,path=tpm0 -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis-device,tpmdev=tpm0 \
-    -boot menu=on
+    -chardev socket,id=chrtpm,path=tpm0 -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis-device,tpmdev=tpm0
 QEMU_PID=$!
 kill -HUP $SWTPM_PID
+    # -boot menu=on \
     # -device usb-net \
     # -nic vmnet-bridged,ifname=en0,model=ne2k_pci \
     # ,show-cursor=on \
