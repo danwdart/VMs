@@ -8,8 +8,4 @@ qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=
     $QEMU_DISP_GPU_GL \
     $QEMU_AAVMF \
     -drive file=nixos-plasma5-24.05pre564493.b0d36bd0a420-aarch64-linux.iso,if=none,id=cd \
-    -device virtio-blk-device,drive=cd \
-    -drive file=nixos.img,if=none,id=hd \
-    -device virtio-blk-device,drive=hd \
-    -drive file=sd.img,format=raw,if=none,id=sd \
-    -device virtio-blk-device,drive=sd
+    -device virtio-blk-device,drive=cd

@@ -1,5 +1,4 @@
-sudo diskutil unmountDisk /dev/rdisk4
-sudo qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=8 \
+qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=8 \
     -boot menu=on \
     $QEMU_SND \
     -display cocoa,show-cursor=on \
@@ -10,7 +9,7 @@ sudo qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp c
     $QEMU_AAVMF \
     -drive file=nixos-plasma5-24.05pre564493.b0d36bd0a420-aarch64-linux.iso,if=none,id=cd \
     -device virtio-blk-device,drive=cd \
-    -drive file=nixos.img,if=none,id=hd \
-    -device virtio-blk-device,drive=hd \
-    -drive file=/dev/rdisk4,format=raw,if=none,id=sd \
-    -device virtio-blk-device,drive=sd
+    -drive file=sd.img,format=raw,if=none,id=sd \
+    -device virtio-blk-device,drive=sd \
+    -drive file=portable.img,format=raw,if=none,id=portable \
+    -device virtio-blk-device,drive=portable
