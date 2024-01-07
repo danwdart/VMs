@@ -1,5 +1,5 @@
 #!/bin/sh
-get_installer
+get_wwpc
 7z x *.7z
 rm *.7z
 mv Microsoft*/*.img .

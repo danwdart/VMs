@@ -1,0 +1,1 @@
+aria2c -s3 -j3 -x3 -k1M --content-disposition -c -i filelist

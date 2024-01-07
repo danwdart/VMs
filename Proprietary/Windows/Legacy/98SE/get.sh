@@ -31,7 +31,7 @@ mk98utils() {
     rm -rf 98utils
 }
 
-get_installer
+get_wwpc
 
 [ -f win98se.iso ] || mkiso
 [ -f boot.img ] || mkboot

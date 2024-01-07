@@ -1,4 +1,4 @@
-get_installer
+get_wwpc
 mkdir bios-mips
 cd bios-mips
 unzip ../setup.zip

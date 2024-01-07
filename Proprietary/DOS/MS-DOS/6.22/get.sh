@@ -1,6 +1,6 @@
 #!/bin/sh
 set -euo pipefail
-get_installer
+get_wwpc
 7z x Microsoft\ MS-DOS\ 6.22\ Plus\ Enhanced\ Tools\ \(3.5\).7z
 mv Microsoft\ MS-DOS\ 6.22\ Plus\ Enhanced\ Tools\ \(3.5\)/*.img .
 rm Microsoft\ MS-DOS\ 6.22\ Plus\ Enhanced\ Tools\ \(3.5\)* -rf
