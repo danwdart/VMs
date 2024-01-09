@@ -5,6 +5,6 @@ qemu-system-aarch64 -M virt,accel=hvf,highmem=off -m 3G -cpu cortex-a72 -serial 
     $QEMU_USB \
     -device ramfb \
     $QEMU_AAVMF \
-    -nic user,model=virtio-net-pci \
+    -nic user,model=rtl8139 \
     -drive file=arm64.img,id=hd,if=none \
     -device usb-storage,drive=hd
