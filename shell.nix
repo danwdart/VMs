@@ -27,7 +27,7 @@ runCommand "VMs" {
         export QEMU_X86_64="qemu-system-x86_64 $QEMU_ALWAYS ${params_x86_64} -smp cores=4,threads=2"
         export QEMU_X86_64_NETBSD="qemu-system-x86_64 $QEMU_ALWAYS ${params_x86_64},sse2=off -smp cores=4,threads=2"
         export QEMU_RPI3B="qemu-system-aarch64 $QEMU_ALWAYS -M raspi3b -m 1G -cpu cortex-a53 -serial stdio -smp cores=4,threads=2 $QEMU_USB -device usb-net"
-        export QEMU_AARCH64="qemu-system-aarch64 $QEMU_ALWAYS ${params_aarch64} -serial stdio -smp cores=12,threads=2 $QEMU_VIRTIO_PERIPH -device virtio-net $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
+        export QEMU_AARCH64="qemu-system-aarch64 $QEMU_ALWAYS ${params_aarch64} -serial stdio -smp cores=12,threads=2 $QEMU_VIRTIO_PERIPH -nic user,model=virtio $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
         VMSDIR=$(pwd)
         export QEMU_RISCV64="qemu-system-riscv64 $QEMU_ALWAYS -M virt -m 2G -cpu rv64 -smp cores=4,threads=2"
         export QEMU_TPM="-tpmdev passthrough,id=tpm0,path=/dev/tpm0 -device tpm-tis,tpmdev=tpm0"
@@ -63,7 +63,7 @@ runCommand "VMs" {
         aria
         cabextract
         chntpw
-        wimlib
+        # wimlib # error: call to undeclared library function 'strtoull' with type 'unsigned long long (const char *, char **, int)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
         util-linux # for sfdisk
         swtpm
     ] ++ (if builtins.currentSystem == "aarch64-darwin" then [
