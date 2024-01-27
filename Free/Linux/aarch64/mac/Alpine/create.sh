@@ -1,0 +1,1 @@
+qemu-img create -fraw alpine.img 1G 
