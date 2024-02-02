@@ -65,7 +65,7 @@ runCommand "VMs" {
         chntpw
         # wimlib # error: call to undeclared library function 'strtoull' with type 'unsigned long long (const char *, char **, int)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
         util-linux # for sfdisk
-        swtpm
+        # swtpm # broken tests
     ] ++ (if builtins.currentSystem == "aarch64-darwin" then [
 
     ] else [
