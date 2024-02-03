@@ -1,5 +1,4 @@
 sudo qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -smp cores=8 \
-    -boot menu=on \
     $QEMU_SND \
     $QEMU_VIRTIO_PERIPH \
     $QEMU_USB \

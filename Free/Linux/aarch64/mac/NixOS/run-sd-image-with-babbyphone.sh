@@ -1,5 +1,4 @@
 qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=8 \
-    -boot menu=on \
     $QEMU_SND \
     $QEMU_VIRTIO_PERIPH \
     $QEMU_USB \
@@ -12,5 +11,4 @@ qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=
     -device virtio-blk-device,drive=sd \
     -nic user,model=virtio-net-pci \
     -device qemu-xhci \
-    -device usb-host,vendorid=0x04e8,productid=0x6860 \
-    -boot menu=on
+    -device usb-host,vendorid=0x04e8,productid=0x6860

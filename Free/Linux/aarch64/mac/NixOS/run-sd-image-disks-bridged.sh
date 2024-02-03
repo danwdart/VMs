@@ -1,4 +1,3 @@
-sudo diskutil unmountDisk /dev/rdisk4
 sudo qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=8 \
     $QEMU_SND \
     $QEMU_VIRTIO_PERIPH \
@@ -8,6 +7,10 @@ sudo qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp c
     $QEMU_AAVMF \
     -drive file=nixos.img,if=none,id=hd \
     -device virtio-blk-device,drive=hd \
-    -drive file=/dev/rdisk4,format=raw,if=none,id=sd \
+    -drive file=sd.img,format=raw,if=none,id=sd \
     -device virtio-blk-device,drive=sd \
-    -nic user,model=virtio-net-pci
+    -drive file=disk4.img,format=raw,if=none,id=disk4 \
+    -device virtio-blk-device,drive=disk4 \
+    -drive file=disk5.img,format=raw,if=none,id=disk5 \
+    -device virtio-blk-device,drive=disk5 \
+    -nic vmnet-bridged,ifname=en0,mac=52:54:00:12:34:56,model=virtio-net-pci

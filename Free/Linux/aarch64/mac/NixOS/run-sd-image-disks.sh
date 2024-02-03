@@ -1,5 +1,4 @@
-qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=8 \
-    -boot menu=on \
+qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=8
     $QEMU_SND \
     $QEMU_VIRTIO_PERIPH \
     $QEMU_USB \
@@ -14,5 +13,4 @@ qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -serial stdio -smp cores=
     -device virtio-blk-device,drive=disk4 \
     -drive file=disk5.img,format=raw,if=none,id=disk5 \
     -device virtio-blk-device,drive=disk5 \
-    -nic user,model=virtio-net-pci \
-    -boot menu=on
+    -nic user,model=virtio-net-pci

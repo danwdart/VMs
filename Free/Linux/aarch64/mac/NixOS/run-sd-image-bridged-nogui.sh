@@ -1,5 +1,4 @@
 sudo qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -smp cores=8 \
-    -boot menu=on \
     $QEMU_SND \
     $QEMU_VIRTIO_PERIPH \
     $QEMU_USB \
@@ -11,5 +10,4 @@ sudo qemu-system-aarch64 -M virt,accel=hvf -m 16G -cpu host -smp cores=8 \
     -drive file=sd.img,format=raw,if=none,id=sd \
     -device virtio-blk-device,drive=sd \
     -nic vmnet-bridged,ifname=en0,mac=52:54:00:12:34:56,model=virtio-net-pci \
-    -boot menu=on \
     -nographic
