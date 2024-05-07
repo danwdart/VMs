@@ -6,4 +6,4 @@ then
 fi
 
 fallocate -l$1 $2
-chattr +C $2
+chattr +C $2 || echo Okay then, must not be btrfs.
