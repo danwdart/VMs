@@ -7,7 +7,7 @@ qemu-system-aarch64 -M virt,highmem=off,accel=hvf \
     -display cocoa \
     -drive file=win11.qcow2,if=none,format=qcow2,id=hd \
     -device usb-storage,drive=hd,serial=hd \
-    -drive file=virtio-win-0.1.240.iso,format=raw,id=drivers,if=none,media=cdrom \
+    -drive file=$VIRTIO_WIN_ISO,format=raw,id=drivers,if=none,media=cdrom \
     -device usb-storage,drive=drivers,serial=drivers \
     $QEMU_AAVMF
     # \ -boot menu=on \

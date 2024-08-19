@@ -1,5 +1,5 @@
-$QEMU_X86_64 $QEMU_USB $QEMU_VIRTIO_PERIPH $QEMU_OVMF $QEMU_DISP_GL $QEMU_BALLOON -m 2048 \
+$QEMU_X86_64 $QEMU_USB $QEMU_VIRTIO_PERIPH $QEMU_OVMF $QEMU_DISP_GL $QEMU_BALLOON -m 2G \
     -drive file=nixos.img,format=raw,if=none,id=hd \
-    -drive file=nixos-plasma5-23.05pre468444.4bb072f0a8b-x86_64-linux.iso,format=raw,if=none,id=cd,media=cdrom \
+    -drive file=nixos-plasma6-24.11pre630835.bfb7a882678e-x86_64-linux.iso,format=raw,if=none,id=cd,media=cdrom \
     -device usb-storage,drive=hd \
     -device usb-storage,drive=cd

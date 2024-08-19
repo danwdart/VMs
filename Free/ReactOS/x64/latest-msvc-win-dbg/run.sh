@@ -1,2 +1,2 @@
-#!/bin/sh
-$QEMU_X86_64 reactos.img -cdrom reactos*x64*.iso -m 128 $QEMU_USB2 -monitor stdio
+#!/bin/sh   
+$QEMU_X86_64_PC reactos.img -cdrom reactos*x64*.iso -m 256 -cpu host  $QEMU_USB2 -monitor stdio $QEMU_DISP_STD

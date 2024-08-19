@@ -3,5 +3,5 @@ $QEMU_AARCH64 \
     $QEMU_USB \
     $QEMU_DISP_GPU_GL \
     $QEMU_RNG \
-    -m 2048 \
+    -m 2G \
     $QEMU_AAVMF

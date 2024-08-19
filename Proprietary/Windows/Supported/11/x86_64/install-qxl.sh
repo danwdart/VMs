@@ -1,1 +1,0 @@
-sudo $QEMU_X86_64 -m 4096 $QEMU_SECURE_OVMF -usb $QEMU_DISP_QXL -device usb-kbd -device usb-tablet $QEMU_SND -device hda-output win11.img -cdrom Win11_EnglishInternational_x64v1.iso $QEMU_TPM -drive file=virtio-win-0.1.217.iso,media=cdrom $QEMU_BALLOON

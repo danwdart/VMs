@@ -1,1 +1,11 @@
-sudo $QEMU_X86_64 -m 4096 $QEMU_SECURE_OVMF $QEMU_DISP_GL $QEMU_VIRTIO_PERIPH -nic user,model=virtio $QEMU_SND -drive file=win11.img,if=virtio -drive file=virtio-win-0.1.217.iso,media=cdrom,if=virtio $QEMU_TPM $QEMU_BALLOON
+
+sudo $QEMU_X86_64 \
+    -m 8G \
+    $QEMU_USB \
+    $QEMU_SECURE_OVMF \
+    $QEMU_DISP_GL \
+    $QEMU_VIRTIO_PERIPH \
+    -nic user,model=virtio \
+    $QEMU_SND \
+    -drive file=win11.img,if=virtio,id=hd \
+    $QEMU_BALLOON

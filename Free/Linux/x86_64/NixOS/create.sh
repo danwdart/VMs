@@ -1,1 +1,1 @@
-create_hd_img 4G nixos.img
+create_hd_img 16G nixos.img
