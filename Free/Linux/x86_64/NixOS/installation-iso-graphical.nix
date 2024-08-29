@@ -8,8 +8,8 @@
     <nixpkgs/nixos/modules/installer/cd-dvd/channel.nix>
   ];
   # not 6.9 because build fails saying zfs is broken even though I don't care about zfs
-  boot.supportedFilesystems = [ "vfat" "ext4" ];
-  boot.kernelModules = [ "sdhci-pci" ];
+  boot.supportedFilesystems = [ "ext4" ];
+  boot.kernelModules = [ "vfat" "ext4" "uas" "usb-storage" ];
   environment.systemPackages = with pkgs; [
     vim
   ];

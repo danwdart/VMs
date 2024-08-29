@@ -9,8 +9,8 @@
   ];
   # not 6.9 because build fails saying zfs is broken even though I don't care about zfs
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_8;
-  boot.supportedFilesystems = [ "vfat" "ext4" ];
-  boot.kernelModules = [ "sdhci-pci" ];
+  boot.supportedFilesystems = [ "ext4" ];
+  boot.kernelModules = [ "vfat" "ext4" "uas" "usb-storage" ];
   environment.systemPackages = with pkgs; [
     vim
   ];
