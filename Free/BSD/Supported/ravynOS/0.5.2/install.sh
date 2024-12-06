@@ -1,0 +1,1 @@
+$QEMU_X86_64 ravynos.img $QEMU_USB2 -cdrom *.iso $QEMU_DISP_GL -boot menu=on -m 8G $QEMU_OVMF
