@@ -1,1 +1,1 @@
-create_hd_img 10G netbsd.img
+create_hd_img 20G netbsd.img
