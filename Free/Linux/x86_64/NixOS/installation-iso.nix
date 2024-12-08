@@ -10,7 +10,7 @@
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_latest;
   boot.supportedFilesystems = [ "ext4" ];
-  boot.kernelModules = [ "vfat" "ext4" "uas" "usb-storage" ];
+  boot.kernelModules = [ "vfat" "ext4" "uas" "usb-storage" "loop" ];
   environment.systemPackages = with pkgs; [
     vim
   ];
