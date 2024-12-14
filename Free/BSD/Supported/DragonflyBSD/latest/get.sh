@@ -1,2 +1,2 @@
 get_installer
-bunzip2 dfly-x86_64-6.2.1_REL.img.bz2
+bunzip2 DragonFly-x86_64-LATEST-IMG.img.bz2
