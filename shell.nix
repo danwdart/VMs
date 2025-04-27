@@ -28,7 +28,7 @@ runCommand "VMs" {
         export QEMU_X86="qemu-system-i386 $QEMU_ALWAYS ${params_x86} -smp cores=4,threads=2"
         export QEMU_X86_64="qemu-system-x86_64 $QEMU_ALWAYS ${params_x86_64} -smp cores=4,threads=2"
         export QEMU_X86_64_PC="qemu-system-x86_64 $QEMU_ALWAYS ${params_x86_64_pc} -smp cores=4,threads=2"
-        export QEMU_X86_64_NETBSD="qemu-system-x86_64 $QEMU_ALWAYS ${params_x86_64},sse2=off -smp cores=4,threads=2"
+        export QEMU_X86_64_NOSSE2="qemu-system-x86_64 $QEMU_ALWAYS ${params_x86_64},sse2=off -smp cores=4,threads=2"
         export QEMU_RPI3B="qemu-system-aarch64 $QEMU_ALWAYS -M raspi3b -m 1G -cpu cortex-a53 -serial stdio -smp cores=4,threads=2 $QEMU_USB -device usb-net"
         export QEMU_AARCH64="qemu-system-aarch64 $QEMU_ALWAYS ${params_aarch64} -serial stdio -smp cores=12,threads=2 $QEMU_VIRTIO_PERIPH -nic user,model=virtio $QEMU_AAVMF -device ramfb -boot menu=on -device nec-usb-xhci $QEMU_USB"
         VMSDIR=$(pwd)
