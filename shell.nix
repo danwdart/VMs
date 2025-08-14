@@ -55,7 +55,7 @@ runCommand "VMs" {
         export QEMU_RNG="-object rng-random,filename=/dev/urandom,id=rng -device virtio-rng-device,rng=rng"
         export QEMU_SND="-device ich9-intel-hda -device hda-micro"
         [ -f "vbios_gvt_uefi.rom" ] || aria2c -s16 -j16 -x16 -k1M --content-disposition -c https://web.archive.org/web/20201020144354/http://120.25.59.132:3000/vbios_gvt_uefi.rom
-        find -name "*.sh" -exec sh -c '
+        find . -name "*.sh" -exec sh -c '
             DIRNAME="$(dirname "{}")"
             [ -f "$DIRNAME/edk2-i386-vars.fd" ] || cp --no-preserve=mode,ownership $OVMF_VARS "$DIRNAME"
             [ -f "$DIRNAME/edk2-arm-vars.fd" ] || cp --no-preserve=mode,ownership $AAVMF_VARS "$DIRNAME"
