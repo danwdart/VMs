@@ -20,6 +20,6 @@ sudo $QEMU_X86_64 \
     $QEMU_SND \
     -drive file=win11.img,if=virtio,id=hd \
     $QEMU_BALLOON \
-    $QEMU_EMU_TPM &
+    $QEMU_TPM_EMU &
 QEMU_PID=$!
 wait

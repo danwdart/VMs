@@ -10,7 +10,7 @@ sudo $QEMU_X86_64 \
     -drive file=win11.img,if=virtio,id=hd \
     -drive file=$VIRTIO_WIN_ISO,if=none,id=virtio,media=cdrom \
     -device usb-storage,drive=virtio \
-    -drive file=Win11_24H2_EnglishInternational_x64.iso,if=none,id=install,media=cdrom \
+    -drive file=Win11_25H2_EnglishInternational_x64.iso,if=none,id=install,media=cdrom \
     -device usb-storage,drive=install \
     $QEMU_BALLOON \
     $QEMU_TPM
