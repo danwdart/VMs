@@ -65,7 +65,7 @@ runCommand "VMs" {
     buildInputs = [
         cdrkit
         qemu
-        aria
+        aria2
         cabextract
         chntpw
         # wimlib # error: call to undeclared library function 'strtoull' with type 'unsigned long long (const char *, char **, int)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
