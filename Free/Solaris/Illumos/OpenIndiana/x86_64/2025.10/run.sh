@@ -1,0 +1,1 @@
+$QEMU_X86_64_NOXSAVE openindiana.img $QEMU_USB2_MOUSE $QEMU_DISP_VMWARE -boot menu=on -m 4G $QEMU_OVMF
